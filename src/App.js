@@ -1,24 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Contact from './Contact'
+
+const arr = [
+  {
+    name: "Sarra",
+    tel: 12557
+  },
+  {
+    name: "wala",
+    tel: 1257412557
+  },
+  {
+    name: "Slim",
+    tel: 122222
+  },
+  {
+    name: "Wissem",
+    tel: 125555
+    },
+    {
+      name: "7amma",
+      tel: 4845
+      }
+]
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{display:"flex", flexWrap:"wrap"}}>
+      {
+        arr.map(el => <Contact name={el.name} tel={el.tel}/>)
+      }
+     
     </div>
   );
 }
